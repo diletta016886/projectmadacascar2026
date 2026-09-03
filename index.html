@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un Filo che Unisce — Adozione a Distanza</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Un Filo che Unisce</a>
+      <nav>
+        <a href="index.html#bambini" data-i18n="nav.bambini">I bambini</a>
+        <a href="chi-siamo.html" data-i18n="nav.chiSiamo">Chi siamo</a>
+        <a href="la-scuola.html" data-i18n="nav.scuola">La scuola</a>
+        <a href="dona.html" data-i18n="nav.dona">Dona ora</a>
+        <a href="index.html#contatti" data-i18n="nav.contatti">Contatti</a>
+        <!-- Selettore lingua: ogni bottone ha data-lang, letto da i18n.js -->
+        <span class="lang-switch">
+          <button class="lang-btn" data-lang="it">IT</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow" data-i18n="index.eyebrow">Missione delle Suore di [Nome Istituto]</p>
+      <h1 data-i18n="index.heroTitle">Un piccolo gesto,<br />una vita che cambia.</h1>
+      <p class="hero-sub" data-i18n="index.heroSub">
+        Con 20€ all'anno puoi aiutare a distanza un bambino: garantisci cibo,
+        istruzione, e puoi seguire la sua crescita anno dopo anno
+        insieme alle suore che si prendono cura di lui ogni giorno.
+      </p>
+      <a href="#adotta" class="btn-primary" data-i18n="index.heroBtn">Scopri come aiutare</a>
+    </div>
+  </section>
+
+  <section id="bambini" class="section">
+    <div class="container">
+      <h2 data-i18n="index.bambiniTitle">I bambini che aspettano un sostegno</h2>
+      <p class="section-intro" data-i18n="index.bambiniIntro">
+        ognuno di loro ha una storia diversa e ha bisogno di un piccolo aiuto per crescere
+      </p>
+
+      <div class="children-grid">
+        <article class="child-card">
+          <img src="immagini/stellah.jpg" alt="Foto di Amara, 7 anni" />
+          <h3>Stellah</h3>
+          <p class="child-age">7 anni</p>
+          <p>...</p>
+        </article>
+
+        <article class="child-card">
+          <img src="https://placehold.co/300x300/2f4a3e/f4ede1?text=Foto" alt="Foto di Kwame, 9 anni" />
+          <h3>Sara</h3>
+          <p class="child-age">9 anni</p>
+          <p>Gioca a calcio...</p>
+        </article>
+
+        <article class="child-card">
+          <img src="https://placehold.co/300x300/2f4a3e/f4ede1?text=Foto" alt="Foto di Noor, 5 anni" />
+          <h3>Sandro</h3>
+          <p class="child-age">5 anni</p>
+          <p>...</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="adotta" class="section section-alt">
+    <div class="container">
+      <h2 data-i18n="index.adottaTitle">Come funziona l'aiuto a distanza</h2>
+      <ul class="adopt-list">
+        <li data-i18n="index.adottaLi1">Scegli o ti viene affidato un bambino seguito dalle suore</li>
+        <li data-i18n="index.adottaLi2">Doni <strong>20€ all'anno</strong>, oppure un'offerta libera se preferisci</li>
+        <li data-i18n="index.adottaLi3">Ricevi aggiornamenti su come sta crescendo</li>
+        <li data-i18n="index.adottaLi4">Puoi scrivere alle suore per avere notizie dirette</li>
+      </ul>
+      <a href="dona.html" class="btn-primary" data-i18n="index.donaBtn">Dona ora</a>
+    </div>
+  </section>
+
+  <section id="contatti" class="section">
+    <div class="container contact-inner">
+      <h2 data-i18n="index.contattiTitle">Parla con le suore</h2>
+      <p class="section-intro" data-i18n="index.contattiIntro">
+        Hai domande sull'adozione o vuoi sapere come sta il tuo bambino?
+        Scrivici, ti risponderemo con affetto.
+      </p>
+      <a href="#" class="btn-primary" data-i18n="index.whatsappBtn">Scrivi su WhatsApp</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footer.text">&copy; 2026 Un Filo che Unisce — Missione delle Suore di [Nome Istituto]</p>
+    </div>
+  </footer>
+
+  <!-- Il dizionario va incluso PRIMA dello script che lo usa -->
+  <script src="translations.js"></script>
+  <script src="i18n.js"></script>
+
+</body>
+</html>

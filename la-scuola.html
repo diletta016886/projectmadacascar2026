@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La scuola — Un Filo che Unisce</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Un Filo che Unisce</a>
+      <nav>
+        <a href="index.html#bambini" data-i18n="nav.bambini">I bambini</a>
+        <a href="chi-siamo.html" data-i18n="nav.chiSiamo">Chi siamo</a>
+        <a href="la-scuola.html" data-i18n="nav.scuola">La scuola</a>
+        <a href="dona.html" data-i18n="nav.dona">Dona ora</a>
+        <a href="index.html#contatti" data-i18n="nav.contatti">Contatti</a>
+        <span class="lang-switch">
+          <button class="lang-btn" data-lang="it">IT</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <section class="parallax-hero" style="background-image: url('https://placehold.co/1600x900/1f332a/f4ede1?text=Esterno+della+scuola');">
+    <div class="container">
+      <h1 data-i18n="scuola.parallaxTitle">La nostra scuola</h1>
+      <p data-i18n="scuola.parallaxSub">Le condizioni in cui i bambini studiano ogni giorno</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-content">
+      <p data-i18n="scuola.intro">
+        ...in che condizioni si trova la scuola...
+      </p>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="container stats-inner">
+      <div class="stat">
+        <p class="stat-number">[120]</p>
+        <p class="stat-label" data-i18n="scuola.statChildren">Bambini seguiti</p>
+      </div>
+      <div class="stat">
+        <p class="stat-number">[6]</p>
+        <p class="stat-label" data-i18n="scuola.statClassrooms">Aule</p>
+      </div>
+      <div class="stat">
+        <p class="stat-number">[8]</p>
+        <p class="stat-label" data-i18n="scuola.statTeachers">Insegnanti</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 data-i18n="scuola.galleryTitle">Uno sguardo alla scuola</h2>
+      <p class="section-intro" data-i18n="scuola.galleryIntro">Scorri per vedere altre foto, clicca per ingrandirle.</p>
+      <div class="gallery-scroll">
+        <img src="https://placehold.co/400x300/2f4a3e/f4ede1?text=Aula" alt="Aula della scuola" class="gallery-thumb" />
+        <img src="https://placehold.co/400x300/d1943a/2b2620?text=Lezione" alt="Bambini a lezione" class="gallery-thumb" />
+        <img src="https://placehold.co/400x300/2f4a3e/f4ede1?text=Cortile" alt="Cortile della scuola" class="gallery-thumb" />
+        <img src="https://placehold.co/400x300/d1943a/2b2620?text=Materiali" alt="Materiali scolastici" class="gallery-thumb" />
+        <img src="https://placehold.co/400x300/2f4a3e/f4ede1?text=Ingresso" alt="Ingresso della scuola" class="gallery-thumb" />
+        <img src="https://placehold.co/400x300/d1943a/2b2620?text=Biblioteca" alt="Biblioteca della scuola" class="gallery-thumb" />
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><span>✦</span></div>
+
+  <section class="section quote-section">
+    <div class="container">
+      <blockquote data-i18n="scuola.quote">
+        “Ogni aula ristrutturata, ogni banco in più, è un passo verso un
+        futuro diverso per questi bambini.”
+      </blockquote>
+      <p class="quote-author" data-i18n="scuola.quoteAuthor">— [Nome Suora], responsabile della scuola</p>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img src="" alt="" id="lightbox-img" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footer.text">&copy; 2026 Un Filo che Unisce — Missione delle Suore di [Nome Istituto]</p>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="i18n.js"></script>
+
+  <script>
+    const miniature = document.querySelectorAll('.gallery-thumb');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    miniature.forEach(function (foto) {
+      foto.addEventListener('click', function () {
+        lightboxImg.src = foto.src;
+        lightboxImg.alt = foto.alt;
+        lightbox.classList.add('attivo');
+      });
+    });
+
+    lightboxClose.addEventListener('click', function () {
+      lightbox.classList.remove('attivo');
+    });
+
+    lightbox.addEventListener('click', function (evento) {
+      if (evento.target === lightbox) {
+        lightbox.classList.remove('attivo');
+      }
+    });
+  </script>
+
+</body>
+</html>

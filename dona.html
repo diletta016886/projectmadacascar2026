@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dona ora — Un Filo che Unisce</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Un Filo che Unisce</a>
+      <nav>
+        <a href="index.html#bambini" data-i18n="nav.bambini">I bambini</a>
+        <a href="chi-siamo.html" data-i18n="nav.chiSiamo">Chi siamo</a>
+        <a href="la-scuola.html" data-i18n="nav.scuola">La scuola</a>
+        <a href="dona.html" data-i18n="nav.dona">Dona ora</a>
+        <a href="index.html#contatti" data-i18n="nav.contatti">Contatti</a>
+        <span class="lang-switch">
+          <button class="lang-btn" data-lang="it">IT</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow" data-i18n="dona.eyebrow">Il tuo contributo</p>
+      <h1 data-i18n="dona.title">Come donare</h1>
+      <p class="hero-sub" data-i18n="dona.sub">
+        Scegli la modalità che preferisci: un contributo annuale di 20€
+        oppure un'offerta libera dell'importo
+        che desideri.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-content">
+      <h2 data-i18n="dona.howTitle">Come avviene il pagamento</h2>
+      <p data-i18n="dona.howP1">
+        Le donazioni con importo fisso di 20€ (singola o con rinnovo
+        automatico) vengono gestite tramite <strong>PayPal</strong>: un
+        servizio sicuro e diffuso in tutto il mondo, che accetta anche
+        carte di credito/debito senza bisogno di avere un account PayPal.
+        Il pagamento avviene sul sito di PayPal, mai sul nostro.
+      </p>
+      <p data-i18n="dona.howP2">
+        Se invece preferisci donare un importo libero, puoi farlo con un
+        <strong>bonifico bancario diretto</strong> sul conto delle suore,
+        usando l'IBAN che trovi qui sotto.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="donation-grid">
+
+        <div class="donation-card">
+          <p class="donation-title" data-i18n="dona.card1Title">Donazione singola</p>
+          <p class="donation-amount" data-i18n="dona.card1Amount">20€ <span>una tantum</span></p>
+          <p data-i18n="dona.card1Desc">Doni una volta, e potrai ripetere la donazione l'anno successivo se vuoi continuare.</p>
+          <a href="#" class="btn-primary btn-block" data-i18n="dona.card1Btn">Dona ora</a>
+        </div>
+
+        <div class="donation-card">
+          <p class="donation-title" data-i18n="dona.card3Title">Offerta libera</p>
+          <p class="donation-amount" data-i18n="dona.card3Amount">Importo <span>a tua scelta</span></p>
+          <p data-i18n="dona.card3Desc">Puoi donare qualsiasi cifra direttamente tramite bonifico bancario:</p>
+          <div class="iban-box">
+            <p><strong data-i18n="dona.ibanIntestatario">Intestatario:</strong> Maria Manjaka Miandrarivo</p>
+            <p><strong data-i18n="dona.ibanLabel">IBAN:</strong> [IT00 X000 0000 0000 0000 0000 000]</p>
+            <p><strong data-i18n="dona.causaleLabel">Causale:</strong> <span data-i18n="dona.causaleValue">Offerta libera aiuto a distanza</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-content">
+      <p data-i18n="dona.noteP1">
+        Dopo la donazione riceverai una conferma; per l'offerta libera
+        tramite bonifico, il trasferimento può richiedere qualche giorno
+        lavorativo prima di essere visibile alle suore.
+      </p>
+      <p data-i18n="dona.noteP2">
+        Hai dubbi su quale opzione scegliere, o sul pagamento?
+        <a href="index.html#contatti">Scrivici</a>, ti aiutiamo volentieri.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footer.text">&copy; 2026 Un Filo che Unisce — Missione delle Suore di [Nome Istituto]</p>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="i18n.js"></script>
+
+</body>
+</html>

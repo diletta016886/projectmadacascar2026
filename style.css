@@ -1,0 +1,606 @@
+/* ============================================================
+   VARIABILI DI COLORE
+   Definirle qui in cima permette di riusarle ovunque nel file
+   e cambiare tutta la palette modificando solo queste righe.
+   ============================================================ */
+:root {
+  --verde-bosco: #2f4a3e;
+  --verde-scuro: #1f332a;
+  --ocra: #d1943a;
+  --carta: #f4ede1;
+  --carta-scura: #e8ddc9;
+  --testo: #2b2620;
+}
+
+/* ============================================================
+   RESET DI BASE
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: var(--testo);
+  background: var(--carta);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================================
+   HEADER / NAVIGAZIONE (uguale su tutte le pagine)
+   ============================================================ */
+.site-header {
+  background: var(--carta);
+  border-bottom: 1px solid var(--carta-scura);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--verde-bosco);
+  text-decoration: none;
+}
+
+nav a {
+  color: var(--testo);
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--ocra);
+}
+
+/* Selettore lingua: gruppo di 3 bottoni testuali nel menu.
+   Il bottone della lingua attiva prende la classe "active" via JS. */
+.lang-switch {
+  display: inline-flex;
+  margin-left: 28px;
+  border-left: 1px solid var(--carta-scura);
+  padding-left: 20px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--testo);
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.lang-btn:hover {
+  opacity: 1;
+}
+
+.lang-btn.active {
+  opacity: 1;
+  color: var(--ocra);
+}
+
+/* ============================================================
+   BOTTONI
+   ============================================================ */
+.btn-primary {
+  display: inline-block;
+  background: var(--ocra);
+  color: var(--verde-scuro);
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #e0a750;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--verde-bosco);
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 4px;
+  border: 2px solid var(--verde-bosco);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--verde-bosco);
+  color: var(--carta);
+}
+
+.btn-block {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   HERO (prima sezione di ogni pagina)
+   ============================================================ */
+.hero {
+  background: var(--verde-bosco);
+  color: var(--carta);
+  padding: 100px 0;
+}
+
+.hero-inner {
+  max-width: 640px;
+}
+
+.eyebrow {
+  color: var(--ocra);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+/* ============================================================
+   SEZIONI GENERICHE
+   ============================================================ */
+.section {
+  padding: 90px 0;
+}
+
+.section-alt {
+  background: var(--carta-scura);
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  max-width: 560px;
+  margin-bottom: 48px;
+  opacity: 0.85;
+}
+
+.story-content {
+  max-width: 640px;
+}
+
+.story-content p {
+  margin-bottom: 20px;
+}
+
+.story-content h2 {
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   SCHEDE BAMBINI (homepage)
+   ============================================================ */
+.children-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.child-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.child-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.child-age {
+  color: var(--verde-bosco);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   SEZIONE ADOTTA (homepage, solo panoramica)
+   ============================================================ */
+.adopt-list {
+  list-style: none;
+  margin-top: 24px;
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.adopt-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* ============================================================
+   SCHEDE DI DONAZIONE (pagina dona.html)
+   ============================================================ */
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.donation-card {
+  background: var(--carta);
+  border: 1px solid var(--carta-scura);
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-card-highlight {
+  border: 2px solid var(--ocra);
+  position: relative;
+}
+
+.donation-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ocra);
+  color: var(--verde-scuro);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.donation-title {
+  font-weight: 600;
+  color: var(--verde-bosco);
+  margin-bottom: 8px;
+}
+
+.donation-amount {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--verde-bosco);
+  margin-bottom: 12px;
+}
+
+.donation-amount span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--testo);
+  display: block;
+}
+
+.donation-card p:not(.donation-title):not(.donation-amount) {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.iban-box {
+  background: var(--carta-scura);
+  border-radius: 6px;
+  padding: 16px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.iban-box p {
+  margin-bottom: 6px;
+}
+
+.iban-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   CONTATTI (homepage)
+   ============================================================ */
+.contact-inner {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contact-inner .section-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--verde-scuro);
+  color: var(--carta);
+  padding: 32px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ============================================================
+   IMMAGINE PARALLAX (pagina La scuola)
+   "background-attachment: fixed" fa restare lo sfondo fermo
+   rispetto alla finestra, mentre il testo sopra scorre normalmente:
+   sembra che lo sfondo si muova più lento del resto della pagina.
+   ============================================================ */
+.parallax-hero {
+  height: 60vh;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  color: var(--carta);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.parallax-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   GALLERIA FOTOGRAFICA A SCORRIMENTO (pagina La scuola)
+   overflow-x: auto crea lo scorrimento orizzontale.
+   scroll-snap "aggancia" ogni foto durante lo scroll.
+   ============================================================ */
+.gallery-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+}
+
+.gallery-thumb {
+  flex: 0 0 auto;
+  width: 280px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* ============================================================
+   POPUP / LIGHTBOX (pagina La scuola)
+   display: none lo nasconde di default; il JavaScript aggiunge
+   la classe "attivo" per mostrarlo.
+   ============================================================ */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.92);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.lightbox.attivo {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 36px;
+  color: var(--carta);
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ============================================================
+   FASCIA STATISTICHE (pagina La scuola)
+   ============================================================ */
+.stats-bar {
+  background: var(--verde-scuro);
+  padding: 48px 0;
+}
+
+.stats-inner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.stat {
+  padding: 0 40px;
+  border-right: 1px solid rgba(244, 237, 225, 0.25);
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--ocra);
+}
+
+.stat-label {
+  color: var(--carta);
+  opacity: 0.85;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* ============================================================
+   SEPARATORE DECORATIVO (pagina La scuola)
+   ============================================================ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  color: var(--ocra);
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  height: 1px;
+  width: 80px;
+  background: var(--carta-scura);
+}
+
+.section-divider span {
+  margin: 0 16px;
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   CITAZIONE (pagina La scuola)
+   ============================================================ */
+.quote-section {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.quote-section blockquote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--verde-bosco);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.quote-author {
+  color: var(--testo);
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   FOTO SOVRAPPOSTA (pagina Chi siamo)
+   Il margine negativo "tira su" la foto, facendola scavalcare
+   il confine con la sezione verde sopra di lei.
+   ============================================================ */
+.overlap-photo {
+  width: 100%;
+  max-width: 720px;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: -70px auto 0 auto;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 2;
+}
+
+.section-story {
+  padding-top: 50px;
+}
+
+/* ============================================================
+   RESPONSIVE: SCHERMI PICCOLI
+   ============================================================ */
+@media (max-width: 720px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .parallax-hero {
+    background-attachment: scroll; /* su mobile "fixed" spesso non funziona bene */
+  }
+  nav a {
+    margin-left: 16px;
+    font-size: 0.85rem;
+  }
+  .lang-switch {
+    margin-left: 16px;
+    padding-left: 12px;
+  }
+  .stats-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .stat {
+    border-right: none;
+    padding: 0;
+  }
+  .overlap-photo {
+    margin-top: -40px;
+    max-height: 260px;
+  }
+}
