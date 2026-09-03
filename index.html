@@ -96,7 +96,7 @@
         Hai domande sull'adozione o vuoi sapere come sta il tuo bambino?
         Scrivici, ti risponderemo con affetto.
       </p>
-      <a href="#" class="btn-primary" data-i18n="index.whatsappBtn">Scrivi su WhatsApp</a>
+      <a href="#" class="btn-primary" data-i18n="index.whatsappBtn" id="whatsappBtn">Scrivi su WhatsApp</a>
     </div>
   </section>
 
@@ -109,6 +109,20 @@
   <!-- Il dizionario va incluso PRIMA dello script che lo usa -->
   <script src="translations.js"></script>
   <script src="i18n.js"></script>
+
+  <script>
+    // Imposta qui il numero nel formato internazionale senza + (es: 39 per Italia)
+    (function(){
+      var btn = document.getElementById('whatsappBtn');
+      if(!btn) return;
+      var phone = '261349586496'; //paese+numero
+      var message = "Buongiorno, vorrei informazioni sull'aiuto a distanza.";
+      var url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+      btn.setAttribute('href', url);
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener');
+    })();
+  </script>
 
 </body>
 </html>
